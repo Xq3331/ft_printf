@@ -6,17 +6,17 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:25:47 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/15 16:41:45 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:51:57 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_power_base(size_t x)
+int	ft_power_base(int x)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	if (x < 0)
 		x *= -1;
 	while (x > 0)

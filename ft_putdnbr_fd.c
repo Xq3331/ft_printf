@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:28:10 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/15 15:27:10 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:39:39 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,6 @@ void	ft_putdnbr_fd(size_t nbr, int fd, char *base)
 	nb = nbr;
 	if (nb == 0)
 		ft_putchar_fd(base[0], fd);
-	if (nb < 0 && verif_base(base) == 1)
-	{
-		ft_putchar_fd('-', fd);
-		nb *= -1;
-	}
 	while (nb > 0 && verif_base(base) == 1)
 	{
 		temp = nb % ft_strlen(base);

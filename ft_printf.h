@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:43:40 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/15 16:42:04 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:38:55 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ void	ft_putddnbr_fd(int nbr, int fd, char *base);
 
 int		ft_pow(unsigned long x);
 
-int		ft_power_base(size_t x);
+int		ft_power_base(int x);
 
 #endif

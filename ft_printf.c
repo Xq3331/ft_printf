@@ -6,7 +6,7 @@
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:41:53 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/15 16:48:48 by pfaria-d         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:53:35 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,9 @@ int	scounter(char c, va_list aptr)
 	else if (c == '%')
 		x = 1;
 	else if (c == 's')
-	{
-		printf("%zu\n", ft_strlen(va_arg(aptr, char *)));
-		x = ft_strlen(va_arg(aptr, char *));
-	}
+		x = ft_strlen(va_arg(aptr, char *)) - 1;
 	else if (c == 'p')
-		x = 18;
+		x = 8;
 	else if (c == 'd')
 		x = ft_pow(va_arg(aptr, int));
 	else if (c == 'i')
@@ -109,6 +106,7 @@ static int	nbchar(const char *s, va_list aptr)
 			if (s[i] != '%' && tmp != i)
 				return (0);
 			x += scounter(s[i], aptr);
+			i++;
 		}
 		else
 		{
@@ -125,7 +123,8 @@ int	ft_printf(const	char *str, ...)
 	va_list	aptr;
 	va_list	aptr2;
 	size_t	tmp;
-
+	int		rep;
+	
 	i = 0;
 	va_start(aptr, str);
 	va_start(aptr2, str);
@@ -144,15 +143,6 @@ int	ft_printf(const	char *str, ...)
 	}
 	i = 0;
 	afficherstr(str, aptr);
-	printf("%d", nbchar(str, aptr));
-	return (nbchar(str, aptr));
-}
-
-int	main(void)
-{
-	//char	*ptr;
-
-	//printf("%c", '0');
-	ft_printf("%s", "salut");
-	return (0);
+	rep = nbchar(str, aptr2);
+	return (rep);
 }
