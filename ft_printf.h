@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 09:43:40 by pfaria-d          #+#    #+#             */
-/*   Updated: 2022/11/15 21:38:55 by pfaria-d         ###   ########.fr       */
+/*   Created: 2022/11/16 10:02:25 by pfaria-d          #+#    #+#             */
+/*   Updated: 2022/11/16 16:53:49 by pfaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,19 @@
 # include <string.h>
 # include <stdarg.h>
 
+//ft_printf_utils1.c
+int		ft_strlen(const char *str);
+int		ft_putstr_fd(char *s, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_printfarg(char c, va_list aptr);
+int		ft_printfnbr(const char *str, va_list aptr);
+
+//ft_printf_nbrb.c
+int		ft_nbrb(long nbr, int fd, char *base);
+int		ft_nbrp(unsigned long long int *nbr, int fd, char *base);
+int		ft_unbrb(unsigned int nbr, int fd, char *base);
+
+//ft_printf
 int		ft_printf(const	char *str, ...);
-
-void	ft_putchar_fd(char c, int fd);
-
-void	ft_putdnbr_fd(size_t nbr, int fd, char *base);
-
-void	ft_putendl_fd(char *s, int fd);
-
-void	ft_putnbr_fd(int n, int fd);
-
-void	ft_putstr_fd(char *s, int fd);
-
-void	ft_putunbr_fd(unsigned int nb, int fd);
-
-size_t	ft_strlen(const char *str);
-
-void	ft_putddnbr_fd(int nbr, int fd, char *base);
-
-int		ft_pow(unsigned long x);
-
-int		ft_power_base(int x);
 
 #endif

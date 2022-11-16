@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: pfaria-d <pfaria-d@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/15 09:41:56 by pfaria-d          #+#    #+#              #
-#    Updated: 2022/11/15 16:35:44 by pfaria-d         ###   ########.fr        #
+#    Created: 2022/11/16 12:11:48 by pfaria-d          #+#    #+#              #
+#    Updated: 2022/11/16 12:13:17 by pfaria-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_pow.c ft_power_base.c ft_putddnbr_fd.c ft_printf.c ft_putchar_fd.c ft_putdnbr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_putunbr_fd.c ft_strlen.c
 
+SRC = ft_printf_nbrb.c ft_printf.c ft_printf_utils1.c
 SRCBONUS = 
 
 OBJS = $(SRC:.c=.o)
